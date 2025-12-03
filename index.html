@@ -1,243 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOPIK High Score Starts Here</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TOPIK High Score Starts Here</title>
 
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(180deg, #0b8cc9 0%, #1fa5d6 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 24px 20px;
-        }
+  <style>
+    :root {
+      --bg-start: #0b8cc9;
+      --bg-end: #1fa5d6;
+      --ink: #0b5a7f;
+      --white: #fff;
+    }
 
-        .container {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            max-width: 480px;
-            width: 100%;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .profile-section {
-            text-align: center;
-            margin-bottom: 48px;
-            padding: 0 20px;
-        }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
 
-        .profile-header {
-            margin-bottom: 24px;
-        }
-        .bio-title {
-            font-size: 32px;
-            font-weight: 800;
-            color: #ffffff;
-            margin-top: 10px;
-            margin-bottom: 8px;
-            letter-spacing: -0.6px;
-            line-height: 1.2;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .bio-subtitle {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-top: 50px;
-            margin-bottom: 16px;
-        }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 20px;
+    }
 
-        .bio-text {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 12px;
-            line-height: 1.6;
-        }
+    .container {
+      max-width: 480px;
+      width: 100%;
+    }
 
-        .bio-highlight {
-            font-size: 13px;
-            color: #0b5a7f;
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 10px 14px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 12px;
-            border: none;
-        }
+    /* 상단 섹션 */
+    .profile-section {
+      text-align: center;
+      margin-bottom: 48px;
+      padding: 100px 20px 0; /* Master Korean Today 위 여백 100px */
+    }
 
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 40px;
-        }
+    .bio-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--white);
+      margin: 10px 0 8px;
+      letter-spacing: -0.6px;
+      line-height: 1.2;
+    }
 
-        .link-button {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.95);
-            border: 1.5px solid rgba(255, 255, 255, 0.5);
-            border-radius: 12px;
-            text-decoration: none;
-            color: #0b8cc9;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+    .bio-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
 
-        .link-button:hover {
-            background: #ffffff;
-            border-color: rgba(255, 255, 255, 0.8);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
+    .bio-text {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
 
-        .link-button:active {
-            transform: translateY(0);
-        }
+    .bio-highlight {
+      font-size: 13px;
+      color: var(--ink);
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 12px;
+      border: none;
+    }
 
-        .link-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex: 1;
-        }
+    /* 링크 카드 */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
 
-        .emoji {
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-        }
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--bg-start);
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-        .arrow {
-            color: #0b8cc9;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
+    .link-button:hover {
+      background: #fff;
+      border-color: rgba(255, 255, 255, 0.8);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-        .link-button:hover .arrow {
-            color: #1fa5d6;
-            transform: translateX(3px);
-        }
+    .link-button:active {
+      transform: translateY(0);
+    }
 
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
-            margin: 32px 0;
-        }
-        
-        .footer-text {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 12px;
-            line-height: 1.6;
-            font-weight: 500;
-            margin-bottom: 50px;
-        }
+    .link-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
 
-        /* 힙한 스타일링 - 텍스트 스타일 */
-        .highlight-text {
-            font-weight: 700;
-            color: #0b5a7f;
-        }
+    .emoji {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
 
-        @media (max-width: 480px) {
-            .bio-title {
-                font-size: 28px;
-            }
+    .arrow {
+      color: var(--bg-start);
+      font-size: 16px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
 
-            .link-button {
-                padding: 14px 16px;
-                font-size: 14px;
-            }
+    .link-button:hover .arrow {
+      color: var(--bg-end);
+      transform: translateX(3px);
+    }
 
-            .emoji {
-                font-size: 16px;
-            }
-        }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+      margin: 32px 0;
+    }
 
-        /* 부드러운 스크롤 */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    /* Contact 본문 스타일 */
+    .contact-info {
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    .highlight-text {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    @media (max-width: 480px) {
+      .bio-title { font-size: 28px; }
+      .link-button { padding: 14px 16px; font-size: 14px; }
+      .emoji { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-section">
-            <div class="profile-header">
-            
-                <div class="bio-subtitle">Master Korean Today</div>
-                <div class="bio-title">TOPIK<br>High Score<br>Starts Here</div>
-            </div>
-            <div class="bio-text">Free Score Improvement Consultation · AI Writing Feedback · Study Group</div>
-            <div class="bio-highlight">💝 Starbucks Gift Card for All Surveys <span class="highlight-text">(First 20)</span></div>
-        </div>
+  <div class="container">
+    <section class="profile-section">
+      <div class="bio-subtitle">Master Korean Today</div>
+      <h1 class="bio-title">TOPIK<br>High Score<br>Starts Here</h1>
+      <p class="bio-text">Free Score Improvement Consultation · AI Writing Feedback · Study Group</p>
+      <div class="bio-highlight">💝 Starbucks Gift Card for All Surveys <span class="highlight-text">(First 20)</span></div>
+    </section>
 
-        <div class="links">
-            <a href="https://forms.gle/BEVxGZZgHL7ZXt2fA" class="link-button" target="_blank" rel="noopener noreferrer">
-                <div class="link-content">
-                    <span class="emoji">☕</span>
-                    <span>Take Survey & Get Coffee</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
+    <nav class="links">
+      <a href="https://forms.gle/BEVxGZZgHL7ZXt2fA" class="link-button" target="_blank" rel="noopener noreferrer">
+        <div class="link-content"><span class="emoji">☕</span><span>Take Survey & Get Coffee</span></div>
+        <span class="arrow">→</span>
+      </a>
 
-            <a href="https://kik-neon.vercel.app/" class="link-button" target="_blank" rel="noopener noreferrer">
-                <div class="link-content">
-                    <span class="emoji">✍️</span>
-                    <span>Get Writing Feedback Now</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
+      <a href="https://kik-neon.vercel.app/" class="link-button" target="_blank" rel="noopener noreferrer">
+        <div class="link-content"><span class="emoji">✍️</span><span>Get Writing Feedback Now</span></div>
+        <span class="arrow">→</span>
+      </a>
 
-            <a href="https://forms.gle/oqvwKbVeywKstcd49" class="link-button" target="_blank" rel="noopener noreferrer">
-                <div class="link-content">
-                    <span class="emoji">📅</span>
-                    <span>Free 1:1 Consultation (1/11)</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
+      <a href="https://forms.gle/oqvwKbVeywKstcd49" class="link-button" target="_blank" rel="noopener noreferrer">
+        <div class="link-content"><span class="emoji">📅</span><span>Free 1:1 Consultation (1/11)</span></div>
+        <span class="arrow">→</span>
+      </a>
 
-            <a href="https://open.kakao.com/o/gE2BzO4h" class="link-button" target="_blank" rel="noopener noreferrer">
-                <div class="link-content">
-                    <span class="emoji">👥</span>
-                    <span>Join TOPIK Study Group</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
-        </div>
+      <a href="https://open.kakao.com/o/gE2BzO4h" class="link-button" target="_blank" rel="noopener noreferrer">
+        <div class="link-content"><span class="emoji">👥</span><span>Join TOPIK Study Group</span></div>
+        <span class="arrow">→</span>
+      </a>
+    </nav>
 
-        <div class="divider"></div>
-
-            <div class="footer-text">
-                📞 Contact: 010-9913-8511
-            </div>
-    </div>
+    <div class="divider"></div>
+    <div class="contact-info">📞 Contact: 010-9913-8511</div>
+      
+  </div>
 </body>
 </html>
