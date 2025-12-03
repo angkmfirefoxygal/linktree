@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPIK 고득점의 시작</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .bio {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .bio-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #667eea;
+        }
+
+        .bio-text {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .bio-highlight {
+            font-size: 16px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 24px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+
+        .link-button.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+        }
+
+        .link-button.primary:hover {
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .link-button.gift {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .link-button.gift:hover {
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        .link-button.kakao {
+            background: #FEE500;
+            color: #3c1e1e;
+            border: none;
+        }
+
+        .link-button.kakao:hover {
+            box-shadow: 0 8px 20px rgba(254, 229, 0, 0.4);
+        }
+
+        .emoji {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .contact {
+            margin-top: 10px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .bio-title {
+                font-size: 20px;
+            }
+
+            .link-button {
+                font-size: 15px;
+                padding: 16px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-icon">🎯</div>
+            <div class="bio">
+                <div class="bio-title">🎯 TOPIK 고득점의 시작</div>
+                <div class="bio-text">무료 성적 향상 상담 | AI 쓰기 첨삭 | 스터디 그룹</div>
+                <div class="bio-highlight">💝 설문 참여시 스타벅스 기프티콘</div>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://forms.gle/BEVxGZZgHL7ZXt2fA" class="link-button gift" target="_blank">
+                <span class="emoji">☕</span>
+                설문 참여하고 커피 받기
+            </a>
+
+            <a href="https://kik-neon.vercel.app/" class="link-button primary" target="_blank">
+                <span class="emoji">✍️</span>
+                지금 바로 쓰기 첨삭 받기
+            </a>
+
+            <a href="https://forms.gle/oqvwKbVeywKstcd49" class="link-button" target="_blank">
+                <span class="emoji">📅</span>
+                1/11 무료 상담 신청 (1:1)
+            </a>
+
+            <a href="https://open.kakao.com/o/gE2BzO4h" class="link-button kakao" target="_blank">
+                <span class="emoji">👥</span>
+                TOPIK 스터디 참여하기
+            </a>
+        </div>
+
+        <div class="footer">
+            <div>숙명글로벌어학원 TOPIK 학습 지원 프로젝트</div>
+            <div class="contact">📞 문의: 010-9913-8511</div>
+        </div>
+    </div>
+</body>
+</html>
